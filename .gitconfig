@@ -1,0 +1,18 @@
+[include]
+	path = ~/.gitconfig_local
+[core]
+	excludesfile = ~/.gitignore_global
+[alias]
+  a     = add
+  d     = diff
+  dc    = diff --cached
+  s     = status -s
+  st    = status
+  cm    = commit
+  b     = branch
+  co    = checkout
+  l     = log
+  ll    = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset  %p' --abbrev-commit --date=relative
+  ld    = log --decorate
+  ls    = log --decorate --pretty=short --abbrev-commit
+  lo    = log --oneline --decorate
