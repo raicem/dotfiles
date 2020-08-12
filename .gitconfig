@@ -2,6 +2,7 @@
 	path = ~/.gitconfig_local
 [core]
 	excludesfile = ~/.gitignore_global
+	editor = /usr/bin/vim
 [alias]
   a     = add
   d     = diff

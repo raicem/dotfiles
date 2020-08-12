@@ -1,14 +1,14 @@
 clear lock
-clear control
-clear mod1
-clear mod4
-clear mod5
+!clear control
+!clear mod1
+!clear mod4
+!clear mod5
 
 !-------------------------------------------------
 !This is the default layout for the modifier keys.
 !Use this for reference. Do not uncomment.
 !-------------------------------------------------
-!keycode   9 = Escape NoSymbol Escape
+keycode   9 = Escape NoSymbol Escape
 !keycode  37 = Control_L NoSymbol Control_L
 !keycode  64 = Alt_L Meta_L Alt_L Meta_L
 !keycode  66 = Caps_Lock NoSymbol Caps_Lock
@@ -23,15 +23,15 @@ clear mod5
 !This is the new layout. Use these to change stuff.
 !--------------------------------------------------
 keycode  66 = Escape Caps_Lock Escape
-keycode  37 = Super_L NoSymbol Super_L
-keycode 133 = Alt_L Meta_L Alt_L Meta_L
-keycode  64 = Control_L NoSymbol Control_L
-keycode 108 = Control_R NoSymbol Control_R
-keycode 135 = ISO_Level3_Shift NoSymbol ISO_Level3_Shift 
-keycode 105 = Super_R NoSymbol Super_R
+!keycode  37 = Super_L NoSymbol Super_L
+!keycode 133 = Alt_L Meta_L Alt_L Meta_L
+!keycode  64 = Control_L NoSymbol Control_L
+!keycode 108 = Control_R NoSymbol Control_R
+!keycode 135 = ISO_Level3_Shift NoSymbol ISO_Level3_Shift 
+!keycode 105 = Super_R NoSymbol Super_R
 
-add control = Control_L Control_R
-add mod1 = Alt_L Alt_R Meta_L
-add mod4 = Super_L Super_R Hyper_L
-add mod5 = ISO_Level3_Shift Mode_switch 
+!add control = Control_L Control_R
+!add mod1 = Alt_L Alt_R Meta_L
+!add mod4 = Super_L Super_R Hyper_L
+!add mod5 = Mode_switch ISO_Level3_Shift
 
