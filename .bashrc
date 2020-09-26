@@ -1,6 +1,6 @@
 HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=1000
-HISTFILESIZE=200
+HISTFILESIZE=1000
 shopt -s histappend
 
 # check the window size after each command and, if necessary,
