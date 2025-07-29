@@ -1,0 +1,25 @@
+[timewarrior]
+command=/home/raicem/projects/timewarrior-i3blocks/timewarrior-i3blocks.sh
+interval=1
+signal=10
+
+[sound]
+command=pamixer --get-volume-human
+interval=1
+
+[powerprofile]
+command=~/bin/powerprofile.sh
+interval=10
+
+[chronometer]
+command=~/bin/chronometer.sh
+interval=1
+
+[battery]
+command=~/bin/battery.sh
+interval=10
+
+[time]
+command=date '+%H:%M:%S %d/%m'
+interval=1
+
