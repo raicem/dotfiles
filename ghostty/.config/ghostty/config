@@ -1,1 +1,6 @@
 command = fish
+theme = catppuccin-macchiato
+font-family = JetBrains Mono
+term = xterm-256color
+gtk-titlebar = false
+

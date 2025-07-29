@@ -1,35 +1,33 @@
 {
-    "editor.fontSize": 17,
-    "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace",
-    "editor.lineHeight": 2,
-    "editor.cursorSmoothCaretAnimation": "on",
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
+  "editor.fontSize": 17,
+  "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.lineHeight": 2,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
 
-    "files.autoSave": "onFocusChange",
-    "files.insertFinalNewline": true,
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
 
-    "workbench.editor.enablePreviewFromCodeNavigation": true,
-    "workbench.editor.enablePreviewFromQuickOpen": true,
-    "workbench.colorTheme": "Monokai",
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.colorTheme": "Catppuccin Macchiato",
 
-    "keyboard.dispatch": "keyCode",
+  "keyboard.dispatch": "keyCode",
 
-    "vim.useSystemClipboard": true,
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-        "<C-p>": false
-    },
-    "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-p>": false
+  },
+  "vim.smartRelativeLine": true,
 
-    "python.analysis.typeCheckingMode": "strict",
-    "python.analysis.typeEvaluation.enableReachabilityAnalysis": true,
-    "python.analysis.typeEvaluation.strictDictionaryInference": true,
-    "python.analysis.typeEvaluation.strictListInference": true,
-    "python.analysis.typeEvaluation.strictSetInference": true,
-    "git.autofetch": true,
-    "editor.minimap.enabled": false,
-    "github.copilot.nextEditSuggestions.enabled": true
+  "python.analysis.typeCheckingMode": "strict",
+  "python.analysis.typeEvaluation.enableReachabilityAnalysis": true,
+  "python.analysis.typeEvaluation.strictDictionaryInference": true,
+  "python.analysis.typeEvaluation.strictListInference": true,
+  "python.analysis.typeEvaluation.strictSetInference": true,
+  "git.autofetch": true,
+  "editor.minimap.enabled": false,
+  "github.copilot.nextEditSuggestions.enabled": true
 }
-
-
