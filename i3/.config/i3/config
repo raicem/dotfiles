@@ -14,10 +14,10 @@ set $mod Mod1
 # Remove title bars from all windows
 default_border none
 
-# Set border colors - red for focused window
-client.focused          #ff0000 #ff0000 #ffffff #ff0000   #ff0000
-client.focused_inactive #333333 #333333 #ffffff #333333   #333333
-client.unfocused        #333333 #333333 #888888 #333333   #333333
+# Set border colors - i3 default blue for focused window
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -208,7 +208,7 @@ bindsym $mod+c exec --no-startup-id "CM_LAUNCHER=rofi clipmenu"
 bindsym $mod+Shift+p exec flameshot gui
 
 
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 2
 
 focus_follows_mouse no
 
