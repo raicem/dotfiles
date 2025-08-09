@@ -1,7 +1,7 @@
 {
-  "editor.fontSize": 17,
+  "editor.fontSize": 18,
   "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace",
-  "editor.lineHeight": 2,
+  "editor.lineHeight": 2.1,
   "editor.cursorSmoothCaretAnimation": "on",
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
@@ -11,7 +11,6 @@
 
   "workbench.editor.enablePreviewFromCodeNavigation": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.colorTheme": "Catppuccin Macchiato",
 
   "keyboard.dispatch": "keyCode",
 
@@ -29,5 +28,12 @@
   "python.analysis.typeEvaluation.strictSetInference": true,
   "git.autofetch": true,
   "editor.minimap.enabled": false,
-  "github.copilot.nextEditSuggestions.enabled": true
+  "github.copilot.nextEditSuggestions.enabled": true,
+
+  "stylelint.snippet": ["css", "postcss", "scss"],
+  "stylelint.validate": ["css", "postcss", "scss"],
+  "phpstan.singleFileMode": true,
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "git.blame.editorDecoration.enabled": true,
+  "terminal.integrated.defaultProfile.linux": "fish"
 }
