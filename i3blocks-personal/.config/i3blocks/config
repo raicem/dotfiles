@@ -1,0 +1,16 @@
+[sound]
+command=pamixer --get-volume-human
+interval=1
+
+[powerprofile]
+command=~/bin/powerprofile.sh
+interval=10
+
+[battery]
+command=~/bin/battery.sh
+interval=10
+
+[time]
+command=date '+%H:%M:%S %d/%m'
+interval=1
+
