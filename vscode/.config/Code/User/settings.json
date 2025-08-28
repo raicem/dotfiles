@@ -33,7 +33,8 @@
   "stylelint.snippet": ["css", "postcss", "scss"],
   "stylelint.validate": ["css", "postcss", "scss"],
   "phpstan.singleFileMode": true,
-  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.colorTheme": "Quiet Light",
   "git.blame.editorDecoration.enabled": true,
-  "terminal.integrated.defaultProfile.linux": "fish"
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "chat.editing.confirmEditRequestRemoval": false
 }
