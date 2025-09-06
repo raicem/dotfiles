@@ -1,0 +1,7 @@
+configuration {
+    dpi: 192;
+}
+
+* {
+    font: "JetBrains Mono 16";
+}
