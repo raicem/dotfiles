@@ -5,22 +5,21 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
-
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
-
   "workbench.editor.enablePreviewFromCodeNavigation": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
-
   "keyboard.dispatch": "keyCode",
-
   "vim.useSystemClipboard": true,
   "vim.leader": "<space>",
   "vim.handleKeys": {
     "<C-p>": false
   },
   "vim.smartRelativeLine": true,
-
+  "phpSniffer.autoDetect": true,
+  "[php]": {
+    "editor.defaultFormatter": "wongjn.php-sniffer"
+  },
   "python.analysis.typeCheckingMode": "strict",
   "python.analysis.typeEvaluation.enableReachabilityAnalysis": true,
   "python.analysis.typeEvaluation.strictDictionaryInference": true,
@@ -29,12 +28,20 @@
   "git.autofetch": true,
   "editor.minimap.enabled": false,
   "github.copilot.nextEditSuggestions.enabled": true,
-
-  "stylelint.snippet": ["css", "postcss", "scss"],
-  "stylelint.validate": ["css", "postcss", "scss"],
-  "phpstan.singleFileMode": true,
-  "workbench.colorTheme": "Quiet Light",
+  "stylelint.snippet": [
+    "css",
+    "postcss",
+    "scss"
+  ],
+  "stylelint.validate": [
+    "css",
+    "postcss",
+    "scss"
+  ],
+  "workbench.colorTheme": "Catppuccin Mocha",
   "git.blame.editorDecoration.enabled": true,
   "terminal.integrated.defaultProfile.linux": "fish",
-  "chat.editing.confirmEditRequestRemoval": false
+  "chat.editing.confirmEditRequestRemoval": false,
+  "editor.formatOnSave": true,
+  "phpstan.singleFileMode": true,
 }
