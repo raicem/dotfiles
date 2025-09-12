@@ -3,6 +3,7 @@
 
 # Get battery info using acpi
 battery_info=$(acpi -b)
+battery_health_info=$(acpi -i)
 
 # Check if we got any output
 if [ -z "$battery_info" ]; then
@@ -48,18 +49,21 @@ else
     time_val="N/A"
 fi
 
+# Get battery health
+health=$(echo "$battery_health_info" | grep "design capacity" | awk -F'=' '{print $2}' | tr -d ' %')
+
 # Format the output depending on the battery status
 case "$status" in
     "Discharging")
-        echo " $percentage% (-$time_val)"
+        echo " $percentage% (-$time_val) (Health: $health%)"
         ;;
     "Charging")
-        echo " $percentage% (+$time_val)"
+        echo " $percentage% (+$time_val) (Health: $health%)"
         ;;
     "Full")
-        echo " $percentage% (Full)"
+        echo " $percentage% (Full) (Health: $health%)"
         ;;
     *)
-        echo " $percentage% ($status)"
+        echo " $percentage% ($status) (Health: $health%)"
         ;;
 esac
