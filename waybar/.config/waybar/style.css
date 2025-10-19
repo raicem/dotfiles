@@ -1,0 +1,29 @@
+window#waybar {
+    background: rgba(43, 48, 59, 0.5); /* Semi-transparent dark background */
+    color: #ffffff; /* White text */
+}
+
+/* Style for all buttons in the workspaces module */
+#hyprland-workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+}
+
+/* Style for the active workspace button */
+#hyprland-workspaces button.active {
+    color: #a9b6c2; /* A slightly different color for the active one */
+}
+
+/* Style for the clock modules */
+#clock#date, #clock#time {
+    padding: 0 10px;
+    color: #c792ea; /* Purple color */
+}
+
+/* Style for the volume module */
+#pulseaudio {
+    padding: 0 10px;
+    color: #89ddff; /* Blue color */
+}
