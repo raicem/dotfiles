@@ -44,4 +44,6 @@
   "chat.editing.confirmEditRequestRemoval": false,
   "editor.formatOnSave": true,
   "phpstan.singleFileMode": true,
+  "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+  "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
 }
