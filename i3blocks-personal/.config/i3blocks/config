@@ -3,11 +3,11 @@ command=pamixer --get-volume-human
 interval=1
 
 [powerprofile]
-command=~/bin/powerprofile.sh
+command=~/.local/bin/powerprofile.sh
 interval=10
 
 [battery]
-command=~/bin/battery.sh
+command=~/.local/bin/battery.sh
 interval=10
 
 [time]

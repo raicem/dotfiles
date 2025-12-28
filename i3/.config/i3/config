@@ -21,6 +21,7 @@ font pango:monospace 9
 
 # Set default browser environment variable
 exec_always --no-startup-id "export BROWSER=google-chrome"
+exec_always --no-startup-id feh --bg-fill /home/raicem-personal/Documents/wallpaper-mclaren.jpeg
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -202,6 +203,7 @@ bindsym $mod+Shift+p exec flameshot gui
 
 focus_follows_mouse no
 
+exec --no-startup-id picom -b
 exec --no-startup-id dunst
 exec --no-startup-id flameshot
 exec --no-startup-id env CM_SELECTIONS=clipboard clipmenud -d
@@ -209,6 +211,3 @@ exec --no-startup-id /home/raicem/bin/keyboard.sh
 
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
-
-# default_border pixel 2
-# default_floating_border pixel 2

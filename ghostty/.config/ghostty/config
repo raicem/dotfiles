@@ -2,4 +2,5 @@ command = fish
 theme = Catppuccin Macchiato
 term = xterm-256color
 gtk-titlebar = false
-
+background-opacity = 0.8
+window-decoration = server
