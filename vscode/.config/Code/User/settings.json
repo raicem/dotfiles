@@ -20,11 +20,6 @@
   "[php]": {
     "editor.defaultFormatter": "wongjn.php-sniffer"
   },
-  "python.analysis.typeCheckingMode": "strict",
-  "python.analysis.typeEvaluation.enableReachabilityAnalysis": true,
-  "python.analysis.typeEvaluation.strictDictionaryInference": true,
-  "python.analysis.typeEvaluation.strictListInference": true,
-  "python.analysis.typeEvaluation.strictSetInference": true,
   "git.autofetch": true,
   "editor.minimap.enabled": false,
   "github.copilot.nextEditSuggestions.enabled": true,
@@ -38,12 +33,15 @@
     "postcss",
     "scss"
   ],
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.fixAll.stylelint": "always"
+
+  },
+  "workbench.colorTheme": "Catppuccin Frappé",
   "git.blame.editorDecoration.enabled": true,
   "terminal.integrated.defaultProfile.linux": "fish",
   "chat.editing.confirmEditRequestRemoval": false,
-  "editor.formatOnSave": true,
   "phpstan.singleFileMode": true,
-  "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
-  "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+  
 }

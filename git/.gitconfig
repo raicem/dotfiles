@@ -1,0 +1,48 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	fsmonitor = true
+	untrackedCache = true
+	pager = delta
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[init]
+	defaultBranch = trunk
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[push]
+	autoSetupRemote = true
+	followTags = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[help]
+	autocorrect = prompt
+[commit]
+	verbose = true
+[rerere]
+	enabled = true
+	autoupdate = true
+[rebase]
+	updateRefs = true
+	autoStash = true
+	autoSquash = true
+[merge]
+	conflictstyle = zdiff3
+[pull]
+	rebase = true
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true  # use n and N to move between diff sections
+	dark = true      # or light = true, or omit for auto-detection
+	side-by-side = true
+
+[include]
+	path = ~/.gitconfig.local
