@@ -216,7 +216,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 default_border normal
 default_floating_border normal
 
-exec_always --no-startup-id feh --bg-fill ~/dotfiles/wallpapers/minimal-dark.png
+exec_always --no-startup-id feh --bg-fill ~/wallpaper.png
 
 # Float Bitwarden extension popup
 for_window [title="^Bitwarden$"] floating enable
