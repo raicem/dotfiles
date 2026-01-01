@@ -202,7 +202,6 @@ bindsym $mod+Shift+p exec flameshot gui
 
 focus_follows_mouse no
 
-exec --no-startup-id picom -b
 exec --no-startup-id dunst
 exec --no-startup-id flameshot
 exec --no-startup-id env CM_SELECTIONS=clipboard clipmenud -d
@@ -226,3 +225,4 @@ for_window [title="^Bitwarden$"] move position center
 # General rule for Chrome/Brave extension popups
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
+for_window [workspace="9"] floating enable
