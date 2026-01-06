@@ -1,9 +1,9 @@
 [mgr]
 ratio = [1, 4, 3]
-sort_by = "natural"
+sort_by = "mtime"
 sort_sensitive = false
-sort_reverse = false
-sort_dir_first = true
+sort_reverse = true
+sort_dir_first = false
 linemode = "size"
 show_hidden = false
 show_symlink = true
