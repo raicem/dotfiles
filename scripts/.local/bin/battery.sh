@@ -43,27 +43,41 @@ percentage=$highest_percent
 time_field=$(echo "$highest_bat" | awk -F', ' '{print $3}')
 
 # If time_field contains a valid HH:MM:SS, extract it; otherwise, set to "N/A"
-if [[ "$time_field" =~ [0-9]{2}:[0-9]{2}:[0-9]{2} ]]; then
-    time_val=$(echo "$time_field" | awk '{print $1}')
+if [[ "$time_field" =~ ([0-9]{2}):([0-9]{2}):[0-9]{2} ]]; then
+    hours=${BASH_REMATCH[1]}
+    mins=${BASH_REMATCH[2]}
+    total_minutes=$(( 10#$hours * 60 + 10#$mins ))
+    time_val="${total_minutes} minute"
 else
     time_val="N/A"
 fi
 
-# Get battery health
-health=$(echo "$battery_health_info" | grep "design capacity" | awk -F'=' '{print $2}' | tr -d ' %')
+# Get battery index from the highest_bat string (e.g. "Battery 0: ...")
+bat_index=$(echo "$highest_bat" | awk -F': ' '{print $1}' | awk '{print $2}')
+
+# Calculate power in Watts
+if [ -f "/sys/class/power_supply/BAT$bat_index/power_now" ]; then
+    watts=$(awk '{printf "%.0f", $1/1000000}' "/sys/class/power_supply/BAT$bat_index/power_now")
+elif [ -f "/sys/class/power_supply/BAT$bat_index/current_now" ] && [ -f "/sys/class/power_supply/BAT$bat_index/voltage_now" ]; then
+    current=$(cat "/sys/class/power_supply/BAT$bat_index/current_now")
+    voltage=$(cat "/sys/class/power_supply/BAT$bat_index/voltage_now")
+    watts=$(awk -v c="$current" -v v="$voltage" 'BEGIN {printf "%.0f", (c * v) / 1000000000000}')
+else
+    watts="N/A"
+fi
 
 # Format the output depending on the battery status
 case "$status" in
     "Discharging")
-        echo " $percentage% (-$time_val) (Health: $health%)"
+        echo " $percentage% -$time_val $watts W"
         ;;
     "Charging")
-        echo " $percentage% (+$time_val) (Health: $health%)"
+        echo " $percentage% +$time_val $watts W"
         ;;
     "Full")
-        echo " $percentage% (Full) (Health: $health%)"
+        echo " $percentage% Full $watts W"
         ;;
     *)
-        echo " $percentage% ($status) (Health: $health%)"
+        echo " $percentage% $status $watts W"
         ;;
 esac
