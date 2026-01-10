@@ -47,7 +47,7 @@ if [[ "$time_field" =~ ([0-9]{2}):([0-9]{2}):[0-9]{2} ]]; then
     hours=${BASH_REMATCH[1]}
     mins=${BASH_REMATCH[2]}
     total_minutes=$(( 10#$hours * 60 + 10#$mins ))
-    time_val="${total_minutes} minute"
+    time_val="${total_minutes} min"
 else
     time_val="N/A"
 fi
