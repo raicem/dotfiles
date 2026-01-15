@@ -22,3 +22,6 @@ else
     # No external monitor. Ensure internal is on.
     xrandr --output "$INTERNAL" --auto
 fi
+
+# Set the wallpaper after monitor setup to avoid race conditions
+feh --bg-fill ~/wallpaper.png

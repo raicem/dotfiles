@@ -1,5 +1,3 @@
-.cursorrules
-.cursorignore
 .phpactor.json
 mise.toml
-.claude
+.claude/settings.local.json
