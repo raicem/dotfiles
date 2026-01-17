@@ -69,10 +69,10 @@ fi
 # Format the output depending on the battery status
 case "$status" in
     "Discharging")
-        echo " $percentage% (-$time_val) ($watts W)"
+        echo " $percentage% (-$time_val) (-$watts W)"
         ;;
     "Charging")
-        echo " $percentage% (+$time_val) ($watts W)"
+        echo " $percentage% (+$time_val) (+$watts W)"
         ;;
     "Full")
         echo " $percentage% (Full) ($watts W)"

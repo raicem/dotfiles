@@ -1,3 +1,9 @@
+[recording]
+command=~/.local/bin/i3-rec-toggle.sh
+interval=1
+markup=pango
+signal=10
+
 [sound]
 command=pamixer --get-volume-human
 interval=1

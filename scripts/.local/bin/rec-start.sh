@@ -27,4 +27,7 @@ eval "$slop_geometry"
 ffmpeg -f x11grab -framerate 30 -video_size ${W}x${H} -i :0.0+${X},${Y} -preset ultrafast "$FILENAME" &
 echo $! > "$RECORD_PID_FILE"
 
+# Signal i3blocks to update the recording status
+pkill -SIGRTMIN+10 i3blocks
+
 notify-send "Recording started" "Output file: $FILENAME"

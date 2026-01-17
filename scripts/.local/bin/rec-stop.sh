@@ -9,6 +9,8 @@ if [ -f "$RECORD_PID_FILE" ]; then
     if ps -p "$PID_TO_KILL" > /dev/null; then
         kill "$PID_TO_KILL"
         rm "$RECORD_PID_FILE"
+        # Signal i3blocks to update the recording status
+        pkill -SIGRTMIN+10 i3blocks
         notify-send "Recording stopped" "The video has been saved."
     else
         # The process is not running, but the PID file exists. Clean it up.
