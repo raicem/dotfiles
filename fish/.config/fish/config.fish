@@ -19,3 +19,6 @@ end
 if type -q zoxide
     zoxide init fish | source
 end
+
+# Composer global bin directory
+fish_add_path --append ~/.config/composer/vendor/bin

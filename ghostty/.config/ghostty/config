@@ -1,5 +1,5 @@
 command = fish
-theme = Catppuccin Latte
+theme = Catppuccin Mocha
 term = xterm-256color
 gtk-titlebar = false
 window-decoration = server
