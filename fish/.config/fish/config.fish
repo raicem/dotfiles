@@ -11,6 +11,9 @@ alias lg="lazygit"
 alias grep="rg"
 alias clip="xclip -selection clipboard -i"
 
+# opencode
+fish_add_path /home/raicem/.opencode/bin
+
 # Tool initializations
 if test -x /usr/bin/mise
     /usr/bin/mise activate fish | source

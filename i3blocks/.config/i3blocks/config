@@ -10,6 +10,10 @@ interval=10
 command=~/.local/bin/chronometer.sh
 interval=1
 
+[countdown]
+command=~/.local/bin/countdown.sh
+interval=1
+
 [battery]
 command=~/.local/bin/battery.sh
 interval=10

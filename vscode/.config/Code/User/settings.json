@@ -43,5 +43,7 @@
   "terminal.integrated.defaultProfile.linux": "fish",
   "chat.editing.confirmEditRequestRemoval": false,
   "phpstan.singleFileMode": true,
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.selectedModel": "haiku",
   
 }
