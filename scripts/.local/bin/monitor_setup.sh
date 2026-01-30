@@ -24,4 +24,4 @@ else
 fi
 
 # Set the wallpaper after monitor setup to avoid race conditions
-feh --bg-fill ~/wallpaper.png
+feh --bg-fill ~/dotfiles/wallpaper.png
