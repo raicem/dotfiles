@@ -1,0 +1,51 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "height": 30,
+  "spacing": 4,
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": [],
+  "modules-right": ["custom/recording", "custom/sound", "custom/powerprofile", "clock", "tray"],
+
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}"
+  },
+
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+
+  "custom/recording": {
+    "exec": "sh -c 'if [ -f /tmp/screenrec.pid ]; then printf \"⏹\"; else printf \"⏺\"; fi'",
+    "interval": 1,
+    "format": "{}",
+    "escape": false,
+    "on-click": "sh -c 'if [ -f /tmp/screenrec.pid ]; then ~/dotfiles/scripts/.local/bin/rec-stop.sh; else nohup ~/dotfiles/scripts/.local/bin/rec-start.sh >/tmp/rec-start.log 2>&1 & fi'"
+  },
+
+  "custom/sound": {
+    "exec": "sh -c \"pamixer --get-volume-human 2>/dev/null || pactl get-sink-volume @DEFAULT_SINK@ | tr -s ' ' | cut -d ' ' -f5\"",
+    "interval": 1,
+    "format": "VOL {}"
+  },
+
+  "custom/powerprofile": {
+    "exec": "~/dotfiles/scripts/.local/bin/powerprofile.sh",
+    "interval": 10,
+    "signal": 8,
+    "format": "PWR {}",
+    "on-click": "BLOCK_BUTTON=1 ~/dotfiles/scripts/.local/bin/powerprofile.sh; pkill -SIGRTMIN+8 waybar"
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M:%S %d/%m}"
+  }
+}
