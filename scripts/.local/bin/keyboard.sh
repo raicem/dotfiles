@@ -18,7 +18,8 @@ elif grep -q "Kingston HyperX Alloy Origins 60" /tmp/xinput_list.txt; then
     echo "Applied HyperX (ANSI) settings"
 # Internal keyboard (fallback)
 else
-    setxkbmap -layout tr -variant alt -option -option caps:escape -option altwin:left_win_alt -option altwin:ctrl_alt_win -option lv3:rctl_switch
+    setxkbmap -layout tr -variant alt -option -option caps:escape -option altwin:left_win_alt -option altwin:ctrl_alt_win
+    xmodmap -e "keycode 105 = ISO_Level3_Shift"
     echo "Applied internal (ISO) settings"
 fi
 
