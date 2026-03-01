@@ -15,17 +15,17 @@ fi
 LAYOUT="tr"
 VARIANT="alt"
 MODEL="pc105"
-OPTIONS="caps:escape,altwin:ctrl_alt_win,grp:rctrl_switch"
+OPTIONS="caps:swapescape,altwin:ctrl_alt_win,grp:rctrl_switch"
 MESSAGE="Applied internal (ISO) settings"
 
 # Apple keyboard "Cem" / Apple keyboards
 if printf '%s' "$INPUTS" | grep -Eqi "Cem|Apple"; then
     MODEL="applealu_ansi"
-    OPTIONS="caps:escape,ctrl:swap_lwin_lctl,ctrl:swap_rwin_rctl,lv3:menu_switch"
+    OPTIONS="caps:swapescape,ctrl:swap_lwin_lctl,ctrl:swap_rwin_rctl,lv3:menu_switch"
     MESSAGE="Applied Apple (Cem) settings"
 # HyperX keyboard
 elif printf '%s' "$INPUTS" | grep -qi "Kingston HyperX Alloy Origins 60"; then
-    OPTIONS="caps:escape,altwin:ctrl_alt_win,lv3:menu_switch"
+    OPTIONS="caps:swapescape,altwin:ctrl_alt_win,lv3:menu_switch"
     MESSAGE="Applied HyperX (ANSI) settings"
 fi
 
