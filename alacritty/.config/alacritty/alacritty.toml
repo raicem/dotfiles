@@ -1,31 +1,6 @@
 [terminal.shell]
 program = "fish"
 
-[env]
-TERM = "xterm-256color"
-
-[window]
-decorations = "Full"
-
-[font]
-size = 13.0
-
-[font.normal]
-family = "JetBrainsMono Nerd Font Mono"
-style = "Regular"
-
-[font.bold]
-family = "JetBrainsMono Nerd Font Mono"
-style = "Bold"
-
-[font.italic]
-family = "JetBrainsMono Nerd Font Mono"
-style = "Italic"
-
-[font.bold_italic]
-family = "JetBrainsMono Nerd Font Mono"
-style = "Bold Italic"
-
 [colors.primary]
 background = "#1E1E2E"
 foreground = "#CDD6F4"
