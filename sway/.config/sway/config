@@ -15,8 +15,8 @@ exec_always --no-startup-id systemctl --user import-environment DISPLAY WAYLAND_
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment sway
 
-# Lock screen on idle and before suspend
-exec --no-startup-id swayidle -w timeout 300 "swaylock -f" before-sleep "swaylock -f"
+# Turn displays off after 5 minutes of idle without locking
+exec --no-startup-id swayidle -w timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
 
 # NetworkManager tray applet
 exec --no-startup-id nm-applet
@@ -156,15 +156,14 @@ exec_always --no-startup-id "pkill -x waybar; waybar -c ~/dotfiles/waybar/.confi
 
 bindsym $mod+Shift+m output eDP-1 disable
 bindsym $mod+m output eDP-1 enable
-bindsym $mod+c exec --no-startup-id "CM_LAUNCHER=rofi clipmenu"
-bindsym $mod+Shift+p exec --no-startup-id flameshot gui
+bindsym $mod+c exec --no-startup-id ~/dotfiles/scripts/.local/bin/wayland/clipboard-history.sh pick
+bindsym $mod+Shift+p exec --no-startup-id ~/dotfiles/scripts/.local/bin/wayland/screenshot-region.sh
 
 focus_follows_mouse no
 
 exec_always --no-startup-id "pkill -x mako; mako"
-# Start Flameshot in tray on Sway startup
-exec --no-startup-id flameshot
-exec --no-startup-id env CM_SELECTIONS=clipboard clipmenud -d
+# Flameshot's GUI is unreliable on HiDPI Wayland; use grim/slurp/swappy instead.
+exec_always --no-startup-id ~/dotfiles/scripts/.local/bin/wayland/clipboard-history.sh watch
 exec --no-startup-id ~/.local/bin/monitor_setup.sh
 exec_always --no-startup-id ~/dotfiles/scripts/.local/bin/wayland/keyboard-wayland.sh
 exec --no-startup-id ~/.local/bin/touchpad.sh
@@ -176,11 +175,6 @@ default_border normal
 default_floating_border normal
 
 output * bg ~/dotfiles/wallpaper.png fill
-
-# Float Bitwarden extension popup
-for_window [title="^Bitwarden$"] floating enable
-for_window [title="^Bitwarden$"] resize set 400 600
-for_window [title="^Bitwarden$"] move position center
 
 # General rule for Chrome/Brave extension popups
 for_window [window_role="pop-up"] floating enable
