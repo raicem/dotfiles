@@ -15,8 +15,8 @@ alias clip="xclip -selection clipboard -i"
 fish_add_path /home/raicem/.opencode/bin
 
 # Tool initializations
-if test -x /usr/bin/mise
-    /usr/bin/mise activate fish | source
+if test -x ~/.local/bin/mise
+    ~/.local/bin/mise activate fish | source
 end
 
 if type -q zoxide
