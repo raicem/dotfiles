@@ -7,6 +7,7 @@ set $mod Mod1
 font pango:Noto Sans 10
 
 bar {
+    font pango:Noto Sans 12
     status_command i3blocks -c ~/dotfiles/i3blocks/.config/i3blocks/config
 }
 
