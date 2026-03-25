@@ -1,5 +1,0 @@
-command = fish
-theme = Catppuccin Mocha
-shell-integration-features = ssh-terminfo,ssh-env
-gtk-titlebar = true
-window-decoration = server

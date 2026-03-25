@@ -7,7 +7,7 @@ if set -q __fish_last_dir
 end
 
 function __fish_save_last_dir --on-variable PWD
-    set -gU __fish_last_dir $PWD
+    set -U __fish_last_dir $PWD
 end
 
 # Environment variables
