@@ -13,7 +13,6 @@ end
 # Environment variables
 set -x EDITOR nvim
 set -x VISUAL nvim
-set -g fish_ssh_agent_identity ~/.ssh/id_rsa
 
 # Aliases
 alias lg="lazygit"
