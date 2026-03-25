@@ -6,6 +6,10 @@ set $mod Mod1
 # is used in the bar {} block below.
 font pango:Noto Sans 10
 
+bar {
+    status_command i3blocks -c ~/dotfiles/i3blocks/.config/i3blocks/config
+}
+
 # Set default browser environment variable
 exec_always --no-startup-id "export BROWSER=brave"
 exec_always --no-startup-id dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
@@ -152,8 +156,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec_always --no-startup-id "pkill -x waybar; waybar -c ~/dotfiles/waybar/.config/waybar/config -s ~/dotfiles/waybar/.config/waybar/style.css"
-
 bindsym $mod+Shift+m output eDP-1 disable
 bindsym $mod+m output eDP-1 enable
 bindsym $mod+c exec --no-startup-id ~/dotfiles/scripts/.local/bin/wayland/clipboard-history.sh pick
@@ -166,7 +168,6 @@ exec_always --no-startup-id "pkill -x mako; mako"
 exec_always --no-startup-id ~/dotfiles/scripts/.local/bin/wayland/clipboard-history.sh watch
 exec --no-startup-id ~/.local/bin/monitor_setup.sh
 exec_always --no-startup-id ~/dotfiles/scripts/.local/bin/wayland/keyboard-wayland.sh
-exec --no-startup-id ~/.local/bin/touchpad.sh
 
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
