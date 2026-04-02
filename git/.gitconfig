@@ -2,6 +2,7 @@
 	excludesfile = ~/.gitignore_global
 	fsmonitor = true
 	untrackedCache = true
+	pager = delta
 [column]
 	ui = auto
 [branch]
@@ -32,9 +33,20 @@
 	autoStash = true
 	autoSquash = true
 [merge]
-	conflictstyle = zdiff3
+	conflictStyle = zdiff3
 [pull]
 	rebase = true
 
 [include]
 	path = ~/.gitconfig.local
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	dark = true
+	side-by-side = true
