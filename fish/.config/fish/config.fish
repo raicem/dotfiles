@@ -36,3 +36,4 @@ fish_add_path --append ~/.config/composer/vendor/bin
 
 # npm global bin directory
 fish_add_path --append ~/.npm-global/bin
+fish_add_path /Users/raicem-personal/.local/bin
