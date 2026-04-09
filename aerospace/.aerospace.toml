@@ -98,7 +98,7 @@ on-mode-changed = []
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
     # Open kitty terminal with alt + enter (like in i3)
-    alt-enter = 'exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty'
+    alt-enter = 'exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty --single-instance --detach'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-slash = 'layout tiles horizontal vertical'
