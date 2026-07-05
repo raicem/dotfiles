@@ -27,6 +27,10 @@ if test -x ~/.local/bin/mise
     ~/.local/bin/mise activate fish | source
 end
 
+if type -q fnm
+    fnm env --use-on-cd | source
+end
+
 if type -q zoxide
     zoxide init fish | source
 end
