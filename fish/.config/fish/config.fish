@@ -20,7 +20,7 @@ alias grep="rg"
 alias clip="xclip -selection clipboard -i"
 
 # opencode
-fish_add_path $HOME/.opencode/bin
+fish_add_path --universal $HOME/.opencode/bin
 
 # Tool initializations
 if test -x ~/.local/bin/mise
