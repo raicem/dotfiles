@@ -48,12 +48,8 @@ fish_add_path --append ~/.config/composer/vendor/bin
 
 # npm global bin directory
 fish_add_path --append ~/.npm-global/bin
-fish_add_path /Users/raicem-personal/.local/bin
+# LM Studio CLI (lms)
+if test -d $HOME/.lmstudio/bin
+    fish_add_path $HOME/.lmstudio/bin
+end
 
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/raicem/.lmstudio/bin
-# End of LM Studio CLI section
-
-
-# Added by Antigravity CLI installer
-set -gx PATH "/Users/raicem/.local/bin" $PATH
