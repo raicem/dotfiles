@@ -18,17 +18,25 @@ set -x VISUAL nvim
 alias lg="lazygit"
 alias grep="rg"
 alias clip="xclip -selection clipboard -i"
+alias oc="opencode"
 
 # opencode
 fish_add_path --universal $HOME/.opencode/bin
+
+# Local user binaries
+fish_add_path $HOME/.local/bin
 
 # Tool initializations
 if test -x ~/.local/bin/mise
     ~/.local/bin/mise activate fish | source
 end
 
+if test -x /opt/homebrew/bin/fnm
+    /opt/homebrew/bin/fnm env --use-on-cd --shell fish | source
+end
+
 if type -q fnm
-    fnm env --use-on-cd | source
+    fnm env --use-on-cd --shell fish | source
 end
 
 if type -q zoxide
@@ -41,3 +49,11 @@ fish_add_path --append ~/.config/composer/vendor/bin
 # npm global bin directory
 fish_add_path --append ~/.npm-global/bin
 fish_add_path /Users/raicem-personal/.local/bin
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/raicem/.lmstudio/bin
+# End of LM Studio CLI section
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/Users/raicem/.local/bin" $PATH
