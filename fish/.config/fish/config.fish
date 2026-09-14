@@ -18,7 +18,7 @@ set -x VISUAL nvim
 alias lg="lazygit"
 alias grep="rg"
 alias clip="xclip -selection clipboard -i"
-alias oc="opencode"
+alias oc="opencode2"
 
 # opencode
 fish_add_path --universal $HOME/.opencode/bin
