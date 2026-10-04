@@ -18,7 +18,7 @@ set -x VISUAL nvim
 alias lg="lazygit"
 alias grep="rg"
 alias clip="xclip -selection clipboard -i"
-alias oc="opencode2"
+alias oc="opencode"
 
 # opencode
 fish_add_path --universal $HOME/.opencode/bin
@@ -48,8 +48,4 @@ fish_add_path --append ~/.config/composer/vendor/bin
 
 # npm global bin directory
 fish_add_path --append ~/.npm-global/bin
-# LM Studio CLI (lms)
-if test -d $HOME/.lmstudio/bin
-    fish_add_path $HOME/.lmstudio/bin
-end
 
