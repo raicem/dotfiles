@@ -1,3 +1,5 @@
 .phpactor.json
 mise.toml
 .claude/settings.local.json
+.claude/worktrees/
+.opencode/
