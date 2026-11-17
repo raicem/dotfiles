@@ -3,3 +3,5 @@ mise.toml
 .claude/settings.local.json
 .claude/worktrees/
 .opencode/
+
+**/.claude/settings.local.json

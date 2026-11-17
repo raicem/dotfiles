@@ -2,7 +2,6 @@
 	excludesfile = ~/.gitignore_global
 	fsmonitor = true
 	untrackedCache = true
-	pager = delta
 [column]
 	ui = auto
 [branch]
@@ -44,12 +43,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[interactive]
-	diffFilter = delta --color-only
-[delta]
-	navigate = true
-	dark = true
-	side-by-side = true
 [credential "https://github.com"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
