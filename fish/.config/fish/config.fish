@@ -2,8 +2,8 @@
 set -U fish_greeting
 
 # Start in last directory
-if set -q __fish_last_dir
-    cd $__fish_last_dir
+if status is-interactive; and set -q __fish_last_dir; and test -d "$__fish_last_dir"
+    cd "$__fish_last_dir"
 end
 
 function __fish_save_last_dir --on-variable PWD
